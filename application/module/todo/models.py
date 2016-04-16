@@ -8,6 +8,10 @@ class TodoList(TodoListSchemaMixin, models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
 
+    def get_item_list(self):
+        item_list = TodoItem.objects.filter(id=self.id)
+        return item_list
+
 
 class TodoItem(TodoItemSchemaMixin, models.Model):
     todo_list = models.ForeignKey(TodoList)

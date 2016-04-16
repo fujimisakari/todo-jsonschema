@@ -5,7 +5,7 @@ import os
 from os import system
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
 
-db_name = 'todo'
+db_name = 'todo_json'
 db_user = 'root'
 
 system("echo 'DB setup'")

@@ -13,9 +13,9 @@ class TodoListView(JSONSchemaView):
     schema = TodoListSchema()
 
     def get(self, request, params):
-        tl = TodoList.objects.get(id=1)
+        tl = TodoList.objects.all()
         context = {
-            'todolist_list': [tl.to_dict()],
+            'todolist_list': [x.to_dict() for x in tl],
         }
         return self.render_to_response(context)
 

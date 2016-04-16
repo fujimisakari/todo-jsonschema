@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'todo',
+        'NAME': 'todo_json',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '',
